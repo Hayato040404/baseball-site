@@ -1,0 +1,35 @@
+{
+  "name": "baystars-news-site",
+  "version": "1.0.0",
+  "description": "横浜DeNAベイスターズの自動情報サイト - GitHub Actionsで毎日自動更新",
+  "type": "module",
+  "scripts": {
+    "fetch-articles": "node scripts/fetch-articles.js",
+    "generate-articles": "node scripts/generate-articles.js",
+    "build-site": "node scripts/build-site.js",
+    "dev": "node scripts/dev-server.js",
+    "start": "npm run fetch-articles && npm run generate-articles && npm run build-site"
+  },
+  "keywords": [
+    "baystars",
+    "baseball",
+    "news",
+    "automation",
+    "github-actions"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "feed": "^4.2.2",
+    "front-matter": "^4.0.2",
+    "yaml": "^2.4.5"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "@types/node": "^20.0.0"
+  }
+}
+
